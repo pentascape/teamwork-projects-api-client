@@ -1,0 +1,22 @@
+{
+  "name": "teamwork-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "tslint --project ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^12.0.2",
+    "@types/request": "^2.48.1",
+    "@types/request-promise": "^4.1.43",
+    "typescript": "^3.4.5"
+  }
+}

@@ -1,4 +1,11 @@
 import TeamworkResource from '../TeamworkResource';
+import {Projects as ProjectsType, StatusResponse} from '../types';
+
+import ProjectFetchRequestOptions = ProjectsType.ProjectFetchRequestOptions;
+import ProjectFetchResponse = ProjectsType.ProjectFetchResponse;
+import ProjectCreateRequestOptions = ProjectsType.ProjectCreateRequestOptions;
+import ProjectCreateResponse = ProjectsType.ProjectCreateResponse;
+import ProjectUpdateRequestOptions = ProjectsType.ProjectUpdateRequestOptions;
 
 
 export default class Projects extends TeamworkResource {

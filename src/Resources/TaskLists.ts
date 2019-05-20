@@ -1,4 +1,13 @@
 import TeamworkResource from '../TeamworkResource';
+import {StatusResponse, TaskLists as TaskListsType} from '../types';
+
+import TaskListsListRequestOptions = TaskListsType.TaskListsListRequestOptions;
+import TaskListsListResponse = TaskListsType.TaskListsListResponse;
+import TaskListsFetchOptions = TaskListsType.TaskListsFetchOptions;
+import TaskListsFetchResponse = TaskListsType.TaskListsFetchResponse;
+import TaskListsCreateRequestOptions = TaskListsType.TaskListsCreateRequestOptions;
+import TaskListsCreateResponse = TaskListsType.TaskListsCreateResponse;
+import TaskListsUpdateRequestOptions = TaskListsType.TaskListsUpdateRequestOptions;
 
 
 export default class TaskLists extends TeamworkResource {

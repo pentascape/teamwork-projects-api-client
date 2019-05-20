@@ -1,4 +1,13 @@
 import TeamworkResource from '../TeamworkResource';
+import {Invoices as InvoicesType, StatusResponse} from '../types';
+
+import InvoicesListRequestOptions = InvoicesType.InvoicesListRequestOptions;
+import InvoicesCreateRequestOptions = InvoicesType.InvoicesCreateRequestOptions;
+import InvoicesUpdateRequestOptions = InvoicesType.InvoicesUpdateRequestOptions;
+import InvoicesUpdateCompleteRequestOptions = InvoicesType.InvoicesUpdateCompleteRequestOptions;
+import InvoicesAddTimeLogRequestOptions = InvoicesType.InvoicesAddTimeLogRequestOptions;
+import InvoicesListResponse = InvoicesType.InvoicesListResponse;
+import InvoicesCreateResponse = InvoicesType.InvoicesCreateResponse;
 
 
 export default class Invoices extends TeamworkResource {

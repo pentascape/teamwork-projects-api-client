@@ -1,11 +1,11 @@
-interface TeamworkOptions {
+export interface TeamworkOptions {
   urlPrefix: string;
   region?: string;
   apiKey: string;
 }
 
 
-interface Teamwork {
+export interface Teamwork {
   get(opts: RequestOptions): Promise<any>;
   post(opts: RequestOptions): Promise<any>;
   del(opts: RequestOptions): Promise<any>;
@@ -13,13 +13,17 @@ interface Teamwork {
 }
 
 
-interface RequestOptions {
+export interface RequestOptions {
   path: string;
   qs?: {};
   body?: {};
 }
 
 
-interface StatusResponse {
+export interface StatusResponse {
   STATUS: string;
 }
+
+export * from './invoices';
+export * from './projects';
+export * from './tasklists';

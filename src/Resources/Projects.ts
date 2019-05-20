@@ -1,5 +1,5 @@
+import {Projects as ProjectsType, StatusResponse} from '../../types';
 import TeamworkResource from '../TeamworkResource';
-import {Projects as ProjectsType, StatusResponse} from '../types';
 
 import ProjectFetchRequestOptions = ProjectsType.ProjectFetchRequestOptions;
 import ProjectFetchResponse = ProjectsType.ProjectFetchResponse;

@@ -1,5 +1,5 @@
+import {Invoices as InvoicesType, StatusResponse} from '../../types';
 import TeamworkResource from '../TeamworkResource';
-import {Invoices as InvoicesType, StatusResponse} from '../types';
 
 import InvoicesListRequestOptions = InvoicesType.InvoicesListRequestOptions;
 import InvoicesCreateRequestOptions = InvoicesType.InvoicesCreateRequestOptions;

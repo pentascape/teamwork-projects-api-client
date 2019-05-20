@@ -1,5 +1,5 @@
+import {StatusResponse, TaskLists as TaskListsType} from '../../types';
 import TeamworkResource from '../TeamworkResource';
-import {StatusResponse, TaskLists as TaskListsType} from '../types';
 
 import TaskListsListRequestOptions = TaskListsType.TaskListsListRequestOptions;
 import TaskListsListResponse = TaskListsType.TaskListsListResponse;

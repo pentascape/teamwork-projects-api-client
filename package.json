@@ -1,13 +1,16 @@
 {
-  "name": "teamwork-api-client",
-  "version": "1.0.0",
+  "name": "teamwork-projects-api-client",
+  "version": "1.0.2",
   "description": "",
-  "main": "src/index.ts",
+  "main": "lib/index.js",
   "scripts": {
     "lint": "tslint --project .",
     "build": "tsc"
   },
-  "files": ["lib/**/*"],
+  "files": [
+    "lib/**/*",
+    "types/**/*"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",

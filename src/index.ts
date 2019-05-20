@@ -1,13 +1,10 @@
 import {OptionsWithUri} from 'request-promise';
 import request from 'request-promise-native';
 
+import {RequestOptions, Teamwork, TeamworkOptions} from '../types';
 import Invoices from './Resources/Invoices';
 import Projects from './Resources/Projects';
 import TaskLists from './Resources/TaskLists';
-import {RequestOptions, Teamwork, TeamworkOptions} from './types';
-
-
-export * from './types';
 
 export default class implements Teamwork {
   public Projects: Projects;

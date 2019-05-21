@@ -3,6 +3,7 @@
   "version": "1.0.5",
   "description": "",
   "main": "lib/index.js",
+  "homepage": "https://github.com/pentascape/teamwork-projects-api-client#readme",
   "scripts": {
     "lint": "tslint --project .",
     "build": "tsc -d"
@@ -11,9 +12,13 @@
     "lib/**/*",
     "types/**/*"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pentascape/teamwork-projects-api-client.git"
+  },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Pentascape <devops@pentascape.com>",
+  "license": "MIT",
   "dependencies": {
     "request": "^2.88.0",
     "request-promise-native": "^1.0.7"

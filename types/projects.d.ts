@@ -55,7 +55,7 @@ export namespace Projects {
 
 
   export interface ProjectSetRatesRequestOptions {
-    id: number;
+    id: string;
     'project-default': number;
     users: {
       [userId: string]: {

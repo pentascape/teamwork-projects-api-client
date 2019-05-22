@@ -61,7 +61,7 @@ export default class Projects extends TeamworkResource {
         return {
           rates: response.rates,
         };
-      })
+      });
   }
 
   public setRates(options: ProjectRatesRequestOptions) {

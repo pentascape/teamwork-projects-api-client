@@ -70,7 +70,7 @@ export default class Projects extends TeamworkResource {
       .put({
         path: `/projects/${id}/rates.json`,
         body: {
-          project: requestBody,
+          rates: requestBody,
         },
       })
       .then((_: StatusResponse) => {

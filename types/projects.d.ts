@@ -47,6 +47,24 @@ export namespace Projects {
   }
 
 
+  export interface ProjectFetchRatesRequestOptions {
+    id: string;
+    page: number;
+    pageSize: number;
+  }
+
+
+  export interface ProjectSetRatesRequestOptions {
+    id: number;
+    'project-default': number;
+    users: {
+      [userId: string]: {
+        rate: number;
+      }
+    };
+  }
+
+
   export interface ProjectFetchResponse extends StatusResponse {
     project: {
       replyByEmailEnabled: boolean;
@@ -118,5 +136,19 @@ export namespace Projects {
 
   export interface ProjectCreateResponse extends StatusResponse {
     id: string;
+  }
+
+
+  export interface ProjectFetchRatesResponse extends StatusResponse {
+    rates: {
+      users: {
+        [userId: number]: {
+          source: string;
+          rate: string;
+        };
+      };
+      'account-default': string;
+      'project-default': string;
+    };
   }
 }

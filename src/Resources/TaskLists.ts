@@ -46,7 +46,9 @@ export default class TaskLists extends TeamworkResource {
     return this.service
       .post({
         path: `/projects/${projectId}/tasklists.json`,
-        body,
+        body: {
+          'todo-list': body,
+        },
       })
       .then((response: TaskListsCreateResponse) => ({
         id: response.TASKLISTID,
@@ -59,7 +61,9 @@ export default class TaskLists extends TeamworkResource {
     return this.service
       .put({
         path: `/tasklists/${id}.json`,
-        body,
+        body: {
+          'todo-list': body,
+        },
       })
       .then((_: StatusResponse) => {
         return {};

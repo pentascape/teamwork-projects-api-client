@@ -6,7 +6,7 @@ import ProjectFetchResponse = ProjectsType.ProjectFetchResponse;
 import ProjectCreateRequestOptions = ProjectsType.ProjectCreateRequestOptions;
 import ProjectCreateResponse = ProjectsType.ProjectCreateResponse;
 import ProjectUpdateRequestOptions = ProjectsType.ProjectUpdateRequestOptions;
-import ProjectRatesRequestOptions = ProjectsType.ProjectSetRatesRequestOptions;
+import ProjectSetRatesRequestOptions = ProjectsType.ProjectSetRatesRequestOptions;
 import ProjectFetchRatesRequestOptions = ProjectsType.ProjectFetchRatesRequestOptions;
 import ProjectFetchRatesResponse = ProjectsType.ProjectFetchRatesResponse;
 
@@ -64,7 +64,7 @@ export default class Projects extends TeamworkResource {
       });
   }
 
-  public setRates(options: ProjectRatesRequestOptions) {
+  public setRates(options: ProjectSetRatesRequestOptions) {
     const {id, ...requestBody} = options;
     return this.service
       .put({

@@ -1,10 +1,12 @@
 import {OptionsWithUri} from 'request-promise';
 import request from 'request-promise-native';
+import winston, {Logger} from 'winston';
 
 import {RequestOptions, Teamwork, TeamworkOptions} from '../types';
 import Invoices from './Resources/Invoices';
 import Projects from './Resources/Projects';
 import TaskLists from './Resources/TaskLists';
+
 
 export default class implements Teamwork {
   public Projects: Projects;
@@ -13,6 +15,7 @@ export default class implements Teamwork {
 
   private readonly url: string;
   private readonly key: string;
+  private readonly logger: Logger;
 
   constructor(options: TeamworkOptions) {
     const urlComponents = [
@@ -23,6 +26,10 @@ export default class implements Teamwork {
 
     this.url = urlComponents.filter((e) => e).join('.');
     this.key = options.apiKey;
+    this.logger = winston.createLogger({
+      format: winston.format.json(),
+      level: options.logLevel || 'warn',
+    });
 
     this.loadResources();
   }
@@ -48,9 +55,9 @@ export default class implements Teamwork {
   }
 
   private loadResources() {
-    this.Projects = new Projects(this);
-    this.TaskLists = new TaskLists(this);
-    this.Invoices = new Invoices(this);
+    this.Projects = new Projects(this, this.logger);
+    this.TaskLists = new TaskLists(this, this.logger);
+    this.Invoices = new Invoices(this, this.logger);
   }
 
   private normaliseRequest(opts: RequestOptions): OptionsWithUri {

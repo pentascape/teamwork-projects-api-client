@@ -2,6 +2,7 @@ export interface TeamworkOptions {
   urlPrefix: string;
   region?: string;
   apiKey: string;
+  logLevel?: 'error' | 'warn' | 'info' | 'verbose' | 'debug' | 'silly';
 }
 
 

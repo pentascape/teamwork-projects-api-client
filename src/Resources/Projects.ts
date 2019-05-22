@@ -68,7 +68,7 @@ export default class Projects extends TeamworkResource {
     const {id, ...requestBody} = options;
     return this.service
       .put({
-        path: `projects/${id}/rates.json`,
+        path: `/projects/${id}/rates.json`,
         body: {
           project: requestBody,
         },

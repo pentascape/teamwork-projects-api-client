@@ -2,7 +2,15 @@ import {StatusResponse} from "./index";
 
 export namespace TaskLists {
   export interface TaskListsListRequestOptions {
-    projectId: number;
+    status?: 'all' | 'active' | 'completed';
+    page?: string;
+    pageSize?: string;
+    showDeleted?: boolean;
+    includeArchivedProjects?: boolean;
+  }
+
+
+  export interface ProjectTaskListsListRequestOptions {
     "responsible-party-id"?: string;
     getOverdueCount?: boolean;
     status?: string;
@@ -12,12 +20,7 @@ export namespace TaskLists {
   }
 
 
-  export interface TaskListsFetchOptions {
-    id: number;
-  }
-
-
-  interface TaskListsCreateUpdateSharedRequestOptions {
+  interface TaskListsUpdateRequestOptions {
     name?: string;
     "milestone-id"?: string;
     description?: string;
@@ -26,28 +29,42 @@ export namespace TaskLists {
   }
 
 
-  export interface TaskListsCreateRequestOptions extends TaskListsCreateUpdateSharedRequestOptions {
-    projectId: number;
+  export interface TaskListsCreateRequestOptions extends TaskListsUpdateRequestOptions {
     name: string;
     pinned?: boolean;
   }
 
 
-  export interface TaskListsUpdateRequestOptions extends TaskListsCreateUpdateSharedRequestOptions {
-    id: string;
+  export interface TaskListsReorderRequestOptions {
+    "todo-lists": [
+      {
+        "id": string | number;
+      }
+    ]
+  }
+
+
+  export interface TaskListsCopyRequestOptions {
+    projectId: number;
+    includeCompletedTasks: number;
+  }
+
+
+  export interface TaskListsMoveRequestOptions {
+    projectId: number;
   }
 
 
   interface TaskListsResponseItemShared {
+    id: string;
     name: string;
+    description: string;
+    position: number;
     pinned: boolean;
     "milestone-id": string;
-    description: string;
     "uncompleted-count": number;
-    id: string;
     complete: boolean;
     private: boolean;
-    position: number;
   }
 
 
